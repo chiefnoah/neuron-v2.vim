@@ -196,6 +196,7 @@ func! neuron#edit_zettel_new(title, ...)
     if l:insert_new_zettel_link == 1
         execute "normal! i[[".l:zettel_id."]]#"
         call neuron#add_virtual_titles()
+        w
     endif
 	exec 'edit '.l:zettel_path
 	call util#add_empty_zettel_body(a:title)
